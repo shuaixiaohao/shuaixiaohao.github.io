@@ -1,406 +1,457 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>练习 | fenghao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-    <meta name="keywords" content="FengHao,FengHao's Blog" />
-  
-  <meta name="description" content="写了一个功能简单通讯录。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798">
-<meta name="keywords" content="代码">
-<meta property="og:type" content="article">
-<meta property="og:title" content="练习">
-<meta property="og:url" content="http://yoursite.com/2018/05/19/contacts/index.html">
-<meta property="og:site_name" content="fenghao">
-<meta property="og:description" content="写了一个功能简单通讯录。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-19T08:20:58.267Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="练习">
-<meta name="twitter:description" content="写了一个功能简单通讯录。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/pace.min.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="FENG HAO">
+    
+    
+    
+    
+    
+    
+    <title>练习 | fenghao</title>
+    <link href=”http://yoursite.com“ rel=”prefetch” />
 
-  
-  
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
 </head>
-
 <body>
-  <div id="container">
-      <header id="header">
-    <div id="banner"></div>
-    <div id="header-outer">
-        <div id="header-menu" class="header-menu-pos animated">
-            <div class="header-menu-container">
-                <a href="/" class="left">
-                    <span class="site-title">FengHao&#39;s Blog</span>
-                </a>
-                <nav id="header-menu-nav" class="right">
-                    
-                    <a  href="/">
-                        <i class="fa fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                    
-                    <a  href="/archives">
-                        <i class="fa fa-archive"></i>
-                        <span>Archives</span>
-                    </a>
-                    
-                    <a  href="/about">
-                        <i class="fa fa-user"></i>
-                        <span>About</span>
-                    </a>
-                    
-                </nav>
-                <a class="mobile-header-menu-button">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://yoursite.com" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
         </div>
-        <div id="header-row">
-            <div id="logo">
-                <a href="/">
-                    <img src="/images/fenghao.png" alt="logo">
-                </a>
-            </div>
-            <div class="header-info">
-                <div id="header-title">
-                    
-                    <h2>
-                        FengHao&#39;s Blog
-                    </h2>
-                    
-                </div>
-                <div id="header-description">
-                    
-                    <h3>
-                        一个专注 python 开发的技术博客
-                    </h3>
-                    
-                </div>
-            </div>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a title="FengHao" target="_blank" href="//fenghao.com">
-                            <i class="fa fa-home fa-2x"></i></a>
-                    
-                        <a title="Github" target="_blank" href="//github.com/shuaixiaohao">
-                            <i class="fa fa-github fa-2x"></i></a>
-                    
-                        <a title="Weibo" target="_blank" href="//weibo.com/realfenghao">
-                            <i class="fa fa-weibo fa-2x"></i></a>
-                    
-                        <a title="Twitter" target="_blank" href="//twitter.com/">
-                            <i class="fa fa-twitter fa-2x"></i></a>
-                    
-                </div>
-            </nav>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://yoursite.com">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">fenghao</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/代码/">代码</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/HTML/">HTML</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
         </div>
     </div>
 </header>
-      <div class="outer">
-        <section id="main" class="body-wrap"><article id="pag-contacts" class="article article-type-pag" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="post-title" itemprop="name">
-      练习
-    </h1>
-    <div class="post-title-bar">
-      <ul>
-          
-        <li>
-          <i class="fa fa-calendar"></i>  2018-05-19
-        </li>
-        <li>
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_value_page_pv"></span>
-        </li>
-      </ul>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://yoursite.com">fenghao</a>
+        >
+        <span>练习</span>
     </div>
-  
-
-          
-      </header>
-    
-    <div class="article-entry post-content" itemprop="articleBody">
-      
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2018/05/19/contacts/">练习</a>
+            </h1>
+        </div>
+        <div class="tag-article">
             
-            <p>写了一个功能简单通讯录。</p>
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/代码/">代码</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-05-19
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2018/05/19/contacts/">练习</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-05-19
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/代码/">代码</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>写了一个功能简单通讯录。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#connection（连接）/ cursor（游标）</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, passwd=<span class="string">'123456'</span>,</span><br><span class="line">                           db=<span class="string">'homework'</span>, charset=<span class="string">'utf8'</span>,</span><br><span class="line">                           cursorclass=pymysql.cursors.DictCursor)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Contacts</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.cursor = conn.cursor()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self)</span>:</span></span><br><span class="line">        name = input(<span class="string">'姓名:'</span>)</span><br><span class="line">        tel = input(<span class="string">'电话号码:'</span>)</span><br><span class="line">        addr = input(<span class="string">'地址:'</span>)</span><br><span class="line">        birth = input(<span class="string">'出生日期:'</span>)</span><br><span class="line">        result = self.cursor.execute(<span class="string">'insert into tb_contacts (cname, ctel, caddr, cbirth)</span></span><br><span class="line"><span class="string">                 values (%s, %s, %s, %s)'</span>, (name, tel, addr, birth))</span><br><span class="line">        print(<span class="string">'添加成功'</span> <span class="keyword">if</span> result == <span class="number">1</span> <span class="keyword">else</span> <span class="string">'添加失败'</span>)</span><br><span class="line">        conn.commit()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.cursor.execute(<span class="string">'select cname 姓名, ctel 电话, caddr 地址, cbirth 出生日期 </span></span><br><span class="line"><span class="string">        					from tb_contacts where cname like (%s)'</span>, (name))</span><br><span class="line">        result = self.cursor.fetchone()</span><br><span class="line">        print(result <span class="keyword">if</span> result <span class="keyword">else</span> <span class="string">'没有该联系人'</span>)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">delete</span><span class="params">(self)</span>:</span></span><br><span class="line">        name = input(<span class="string">'姓名:'</span>)</span><br><span class="line">        <span class="keyword">if</span> self.search(name):</span><br><span class="line">            result = self.cursor.execute(<span class="string">'delete from tb_contacts where cname=%s'</span>, (name,))</span><br><span class="line">            t = input(<span class="string">'确认删除？(确认请输入: y)'</span>)</span><br><span class="line">            <span class="keyword">if</span>  t == <span class="string">'y'</span> <span class="keyword">or</span> t == <span class="string">'Y'</span>:</span><br><span class="line">                print(<span class="string">'删除成功'</span> <span class="keyword">if</span> result == <span class="number">1</span> <span class="keyword">else</span> <span class="string">'删除失败'</span>)</span><br><span class="line">                conn.commit()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">'取消删除'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">modify</span><span class="params">(self)</span>:</span></span><br><span class="line">        name = input(<span class="string">'需要编辑的联系人姓名:'</span>)</span><br><span class="line">        <span class="keyword">if</span> self.search(name):</span><br><span class="line">            judg = <span class="keyword">True</span></span><br><span class="line">            <span class="keyword">while</span> judg:</span><br><span class="line">                num = int(input(<span class="string">'请输入编辑项:1.姓名 2.电话 3.地址 4.出生日期 5.退出 \n:'</span>))</span><br><span class="line">                <span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">                    m_name = input(<span class="string">'姓名:'</span>)</span><br><span class="line">                    result = self.cursor.execute(<span class="string">'update tb_contacts set cname=%s </span></span><br><span class="line"><span class="string">                    		where cname=%s'</span>,(m_name, name))</span><br><span class="line">                    print(<span class="string">'已更改'</span> <span class="keyword">if</span> result ==<span class="number">1</span> <span class="keyword">else</span> <span class="string">'更改失败'</span>)</span><br><span class="line">                    conn.commit()</span><br><span class="line">                    self.search(m_name)</span><br><span class="line">                <span class="keyword">elif</span> num == <span class="number">2</span>:</span><br><span class="line">                    m_tel = input(<span class="string">'电话:'</span>)</span><br><span class="line">                    result = self.cursor.execute(<span class="string">'update tb_contacts set ctel=%s </span></span><br><span class="line"><span class="string">                    		where cname=%s'</span>, (m_tel, name))</span><br><span class="line">                    print(<span class="string">'已更改'</span> <span class="keyword">if</span> result == <span class="number">1</span> <span class="keyword">else</span> <span class="string">'更改失败'</span>)</span><br><span class="line">                    conn.commit()</span><br><span class="line">                    self.search(name)</span><br><span class="line">                <span class="keyword">elif</span> num == <span class="number">3</span>:</span><br><span class="line">                    m_addr = input(<span class="string">'地址:'</span>)</span><br><span class="line">                    result = self.cursor.execute(<span class="string">'update tb_contacts set caddr=%s </span></span><br><span class="line"><span class="string">                    		where cname=%s'</span>, (m_addr, name))</span><br><span class="line">                    print(<span class="string">'已更改'</span> <span class="keyword">if</span> result == <span class="number">1</span> <span class="keyword">else</span> <span class="string">'更改失败'</span>)</span><br><span class="line">                    conn.commit()</span><br><span class="line">                    self.search(name)</span><br><span class="line">                <span class="keyword">elif</span> num == <span class="number">4</span>:</span><br><span class="line">                    m_birth = input(<span class="string">'地址:'</span>)</span><br><span class="line">                    result = self.cursor.execute(<span class="string">'update tb_contacts set cbirth=%s </span></span><br><span class="line"><span class="string">                    		where cname=%s'</span>, (m_birth, name))</span><br><span class="line">                    print(<span class="string">'已更改'</span> <span class="keyword">if</span> result == <span class="number">1</span> <span class="keyword">else</span> <span class="string">'更改失败'</span>)</span><br><span class="line">                    conn.commit()</span><br><span class="line">                    self.search(name)</span><br><span class="line">                <span class="keyword">elif</span> num == <span class="number">5</span>:</span><br><span class="line">                    judg = <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">'没有该联系人请选择添加'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.cursor.execute(<span class="string">'select cname 姓名, ctel 电话, caddr 地址, cbirth 出生日期 </span></span><br><span class="line"><span class="string">        					from tb_contacts'</span>)</span><br><span class="line">        result = self.cursor.fetchall()</span><br><span class="line">        <span class="keyword">for</span> a <span class="keyword">in</span> result:</span><br><span class="line">            print(a)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">menu</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'通讯录：\n1.添加 \n2.查询 \n3.删除 \n4.编辑 \n5.查看所有联系人 \n6.退出 '</span>)</span><br><span class="line">contact = Contacts()</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    menu()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> conn.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">            <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">                put = int(input(<span class="string">'请输入相应数字操作:'</span>))</span><br><span class="line">                <span class="keyword">if</span> put == <span class="number">1</span>:</span><br><span class="line">                    contact.add()</span><br><span class="line">                <span class="keyword">elif</span> put == <span class="number">2</span>:</span><br><span class="line">                    name = input(<span class="string">'姓名:'</span>)</span><br><span class="line">                    contact.search(name)</span><br><span class="line">                <span class="keyword">elif</span> put == <span class="number">3</span>:</span><br><span class="line">                    contact.delete()</span><br><span class="line">                <span class="keyword">elif</span> put == <span class="number">4</span>:</span><br><span class="line">                    contact.modify()</span><br><span class="line">                <span class="keyword">elif</span> put == <span class="number">5</span>:</span><br><span class="line">                    contact.all()</span><br><span class="line"></span><br><span class="line">                <span class="keyword">elif</span> put == <span class="number">6</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                    <span class="comment"># conn.close()</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    print(<span class="string">'输入无效'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        conn.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-            <div class="post-copyright">
-    <div class="content">
-        <p>最后更新： 2018年05月19日 16:20</p>
-        <p>原始链接： <a class="post-url" href="/2018/05/19/contacts/" title="练习">http://yoursite.com/2018/05/19/contacts/</a></p>
-        <footer>
-            <a href="http://yoursite.com">
-                <img src="/images/fenghao.png" alt="FENG HAO">
-                FENG HAO
-            </a>
-        </footer>
     </div>
-</div>
-
-      
-        
-            
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;">赏</a>
-</div>
-
-<div id="reward" class="post-modal reward-lay">
-    <a class="close" href="javascript:;" id="reward-close">×</a>
-    <span class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        请我吃糖~
-        <i class="icon icon-quote-right"></i>
-    </span>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
-        </div>
-        <div class="reward-select">
-            
-            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
-                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
-            </label>
-            
-            
-            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
-                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
-            </label>
-            
-        </div>
-    </div>
-</div>
-
-
-        
-    </div>
-    <footer class="article-footer">
-        
-        
-<div class="post-share">
-    <a href="javascript:;" id="share-sub" class="post-share-fab">
-        <i class="fa fa-share-alt"></i>
-    </a>
-    <div class="post-share-list" id="share-list">
-        <ul class="share-icons">
-          <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/19/contacts/&title=《练习》 — fenghao&pic=http://yoursite.comimages/fenghao.png" data-title="微博">
-              <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          <li>
-            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
-              <i class="fa fa-weixin"></i>
-            </a>
-          </li>
-          <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/19/contacts/&title=《练习》 — fenghao&source=" data-title="QQ">
-              <i class="fa fa-qq"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/19/contacts/" data-title="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《练习》 — fenghao&url=http://yoursite.com/2018/05/19/contacts/&via=http://yoursite.com" data-title="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/19/contacts/" data-title="Google+">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-     </div>
-</div>
-<div class="post-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" id="wxShare-close">×</a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/05/19/contacts/" alt="微信分享二维码">
-</div>
-
-<div class="mask"></div>
-
-        
-        <ul class="article-footer-menu">
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/代码/" class="color3">代码</a>
-      
-  </li>
-
-        </ul>
-        
-    </footer>
-  </div>
 </article>
 
 
-
-
-
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            FENG HAO
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
     
-</section>
-        
-      </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-      <p>
-        Copyright <a href="" target="_blank"></a>
-      &copy; 2018 FENG HAO<br>
-      </p>
-    </div>
-  </div>
-</footer>
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var mihoConfig = {
-      root: "http://yoursite.com",
-      animate: true,
-      isHome: false,
-      share: true,
-      reward: 1
-  }
-</script>
-<div class="sidebar">
-    <div id="sidebar-search" title="Search">
-        <i class="fa fa-search"></i>
-    </div>
-    <div id="sidebar-category" title="Categories">
-        <i class="fa fa-book"></i>
-    </div>
-    <div id="sidebar-tag" title="Tags">
-        <i class="fa fa-tags"></i>
-    </div>
-    <div id="sidebar-top">
-        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
-    </div>
-</div>
-<div class="sidebar-menu-box" id="sidebar-menu-box">
-    <div class="sidebar-menu-box-container">
-        <div id="sidebar-menu-box-categories">
-            
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
         </div>
-        <div id="sidebar-menu-box-tags">
-            <a href="/tags/代码/" style="font-size: 10px;">代码</a>
-        </div>
+        <ul class="list-group list-group-flush"></ul>
     </div>
-    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
-</div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div class="mobile-header-menu-container">
-        <span class="title">Menus</span>
-        <ul class="mobile-header-menu-navbar">
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
             
-            <li>
-                <a  href="/">
-                    <i class="fa fa-home"></i><span>Home</span>
-                </a>
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/05/19/contacts/">练习</a>
+                </span>
             </li>
             
-            <li>
-                <a  href="/archives">
-                    <i class="fa fa-archive"></i><span>Archives</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/about">
-                    <i class="fa fa-user"></i><span>About</span>
-                </a>
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/05/15/HTML/">前端知识梳理</a>
+                </span>
             </li>
             
         </ul>
     </div>
-    <div class="mobile-header-tag-container">
-        <span class="title">Tags</span>
-        <div id="mobile-header-container-tags">
-            <a href="/tags/代码/" style="font-size: 10px;">代码</a>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
         </div>
-    </div>
-</div>
-<div class="search-wrap">
-    <span class="search-close">&times;</span>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-            <i class="icon icon-lg icon-chevron-left"></i>
-        </a>
-        <input class="search-field" placeholder="Search..." id="keywords">
-        <a id="search-submit" href="javascript:;">
-            <i class="fa fa-search"></i>
-        </a>
-    <div class="search-container" id="search-container">
-        <ul class="search-result" id="search-result">
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/05/19/contacts/">练习</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/05/15/HTML/">前端知识梳理</a>
+                </span>
+            </li>
+            
         </ul>
     </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+                <li class="">
+                    <a href="/2018/05/19/contacts/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                <li class="">
+                    <a href="/2018/05/19/contacts/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                <li class="">
+                    <a href="/2018/05/19/contacts/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/代码/" style="font-size: 12.650207615618545px;" class="tag-cloud-link">代码</a>
+    
+    <a href="/tags/HTML/" style="font-size: 19.462589860512697px;" class="tag-cloud-link">HTML</a>
+    
 </div>
-
-<div id="search-tpl">
-    <li class="search-result-item">
-        <a href="{url}" class="search-item-li">
-            <span class="search-item-li-title" title="{title}">{title}</span>
-        </a>
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
     </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
 </div>
-<script src="/js/search.js"></script>
-<script src="/js/main.js"></script>
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 FENG HAO Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
 
-
-  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
-  <div id="particles"></div>
-  <script src="/js/particles.js"></script>
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  <script src="/js/animate.js"></script>
-
-
-  <script src="/js/pop-img.js"></script>
-  <script>
-     $(".article-entry p img").popImg();
-  </script>
-
-  </div>
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
 </body>
+<script src="/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+<script src="/js/oni.js"></script>
+
+
+
 </html>
