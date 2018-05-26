@@ -1,10 +1,10 @@
 
-.cb-slideshow li:nth-child(1) span { background-image: url('http://delivery.quanjing.com/?seid=CgG1otCWlxaWmdi0n3XWAdeYmhWXnhX8uuO2mZu3nti0ndeWFdvIztLJmZzImJCWotzMztiZzde4yZi0mgyWmde1nJy4FgH0Dha6lY9XDwfUAMLUzY1WAg90BY5VC3mUywXPExvUy3mUy29TlZvIzs85yZmVnwjLowmZnMiYnZa5nMzLmJnKmtHJmJqWzJaWmtu2nJGVnJqWlMPWzW%3d%3d6567cd08e49fee182adfa0f0a6955220');}
-.cb-slideshow li:nth-child(2) span { background-image: url('http://delivery.quanjing.com/?seid=CgG1nde3lta4mZj8y2HPBMvZzxzPzxCXndz8mtr8FffknJi0ndeXnJe4mxXLm2mYmtvLntmWytfHyJuWnZjMmtGYodjIytC2ndyZoxXODhrWoI8VCxvHBMPPBMCTCgHVDg8UB3nZlMfSAxL1BMnZlMnVBs9Lm2mVmJe1l2uZyZiXnwu1mZbHmwfInta3mMyXodi4mMjHnZy0nJm5lZy0mc5QCgC%3d2d94c616a8d06fe74deacca49add3f59');}
-.cb-slideshow li:nth-child(3) span { background-image: url('http://delivery.quanjing.com/?seid=zwfZDc1LCc1HoteTndu2odG2nhXLyxn0mda3Fde0FhXrsJy4mtC0mdm5otb8ztC0mwy4mJq4nZjInJy1zdy1nJjMyZHHn2u3ota5ndb8Ahr0CdOVl3f1yw5QAw5NlxbOB3rVlM9ZCY5HBgL5Dw5JCY5JB20VztC0lZfMoc9LnZqXzJGYndG3mMi2nJvKnJu2mMzJoge3ztC5mdK0mc82ndaUANbNbd2c2a26e09c75038258f1088c9f79e0');}
-.cb-slideshow li:nth-child(4) span { background-image: url('http://delivery.quanjing.com/?seid=CgGXoty0lxaWmde2nhXWAdeXmxWXnhX8uuO5mtaYmtaYntu4Fgm2yMu0yJLKzMzMmJu5zJKWngjKyMnIzwu4yZu5mgi2FgH0Dha6lY9XDwfUAMLUzY1WAg90BY5VC3mUywXPExvUy3mUy29Tl2m2yI9LngiVyZzIztrIowrMzMyYntLMota0yMrIy2jLztHJntKWyJyVnJqWlMPWzW%3d%3d4103b5a1decfe13eb2daf4df37afe2cf');}
-.cb-slideshow li:nth-child(5) span { background-image: url('http://delivery.quanjing.com/?seid=mJi3lxaWmdq5nxXWAdeXmxWXnhX8uuO2mJiXndy2nZq2FdyZmZC4mdi4ytCWy2e4zdvLyJvLnwm0mtmZyJG1oguYFgH0Dha6lY9XDwfUAMLUzY1WAg90BY5VC3mUywXPExvUy3mUy29TlZyZmY83odaVnJmZnZGWmJHHnZbJytHKnwvInwu1yZqXmZnIodu4ztiVnJqWlMPWzW%3d%3da28ed5d335b617f15d06d2e756004768');}
-.cb-slideshow li:nth-child(6) span { background-image: url('http://delivery.quanjing.com/?seid=AxmWowf1nwfLFgn1Bhr1CMeWmtz8mtr8FffknJy2nJu0nZu1n3WXogiWyMm1mZi5odHJmwyXmdnHnMzMzJq2zwq5mdm0m3XODhrWoI8VCxvHBMPPBMCTCgHVDg8UB3nZlMfSAxL1BMnZlMnVBs8XogiVmgjJlZe4yJbIyZuZmJK4ogmXzJeWm2e2zMzMndzLzdKWmZqZlZy0mc5QCgC%3d4c3412036ecdb1e091baa36c88bfcdf3');}
+.cb-slideshow li:nth-child(1) span { background-image: url('images/bg1.jpg');}
+.cb-slideshow li:nth-child(2) span { background-image: url('images/bg2.jpg');}
+.cb-slideshow li:nth-child(3) span { background-image: url('images/bg3.jpg');}
+.cb-slideshow li:nth-child(4) span { background-image: url('images/bg4.jpg');}
+.cb-slideshow li:nth-child(5) span { background-image: url('images/bg5.jpg');}
+.cb-slideshow li:nth-child(6) span { background-image: url('images/bg6.jpg');}
 
 .hidden-xs{
 
