@@ -1,10 +1,10 @@
 
-.cb-slideshow li:nth-child(1) span { background-image: src='images/bg1.jpg');}
-.cb-slideshow li:nth-child(2) span { background-image: src='images/bg2.jpg');}
-.cb-slideshow li:nth-child(3) span { background-image: src='images/bg3.jpg');}
-.cb-slideshow li:nth-child(4) span { background-image: src='images/bg4.jpg');}
-.cb-slideshow li:nth-child(5) span { background-image: src='images/bg5.jpg');}
-.cb-slideshow li:nth-child(6) span { background-image: src='images/bg6.jpg');}
+.cb-slideshow li:nth-child(1) span { background-image: url('images/bg1.jpg');}
+.cb-slideshow li:nth-child(2) span { background-image: url('images/bg2.jpg');}
+.cb-slideshow li:nth-child(3) span { background-image: url('images/bg3.jpg');}
+.cb-slideshow li:nth-child(4) span { background-image: url('images/bg4.jpg');}
+.cb-slideshow li:nth-child(5) span { background-image: url('images/bg5.jpg');}
+.cb-slideshow li:nth-child(6) span { background-image: url('images/bg6.jpg');}
 
 .hidden-xs{
 
