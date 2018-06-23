@@ -21,30 +21,12 @@
     <link rel="alternate" href="/atom.xml" title="fenghao&#39;s blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/fenghao.ico">
-  
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/plugin/bganimation/bg.css">
   
-
-  
-<!-- baidu_tongji -->
-<script type="text/javascript">
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?15e36291b21a43b8331398499c46ee6f";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End Google Analytics -->
-
-
-
 
 </head>
 
@@ -237,7 +219,7 @@ var _hmt = _hmt || [];
 <p>global 和 nonlocal关键字</p>
 <p>当内部作用域想修改外部作用域的变量时，就要用到global和nonlocal关键字了</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">random.choice():返回列表,元祖,字典中的某一个值</span><br><span class="line">random.choices():返回列表,元祖,字典中的指定个数值个值 k 关键字参数</span><br><span class="line">random.random():返回<span class="number">0</span><span class="number">-1</span>之间的数,  [<span class="number">0</span>, <span class="number">1</span>)  </span><br><span class="line">random.uniform():返回指定的一个区间范围的随机数 [, )</span><br><span class="line">random.randint():返回指定区间范围的随机整数 [, ]</span><br><span class="line">random.shuffle():将列表中的数据进行打乱排序</span><br></pre></td></tr></table></figure>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>不定长参数: *args</span><br><span class="line"><span class="bullet">2. </span>关键字参数: **kw</span><br><span class="line"><span class="bullet">3. </span>偏函数: 导入模块 import functools</span><br><span class="line"><span class="code">        functools.partical()就是创建一个新的函数.不需要自行定义函数.直接将结果赋值给一个变量,而		  这个变量就是一个函数.这个函数的目的是将默认参数给固定住</span></span><br><span class="line"><span class="bullet">4. </span>回调函数: 定义函数时,将函数名作为参数传递过来,然后在函数里边再次调用函数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 不定长参数: *args</span><br><span class="line">2. 关键字参数: **kw</span><br><span class="line">3. 偏函数: 导入模块 import functools</span><br><span class="line">        functools.partical()就是创建一个新的函数.不需要自行定义函数.直接将结果赋值给一个变量,而		  这个变量就是一个函数.这个函数的目的是将默认参数给固定住</span><br><span class="line">4. 回调函数: 定义函数时,将函数名作为参数传递过来,然后在函数里边再次调用函数</span><br></pre></td></tr></table></figure>
 <h4 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h4><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><table>
 <thead>
 <tr>
@@ -672,7 +654,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/25/python学习/" data-id="cjhn6fbfr00078wve9k6c5mx3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/25/python学习/" data-id="cjhn6p82f0007mgvebyxxszhi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a><span class="article-tag-list-count">1</span></li></ul>
@@ -862,115 +844,6 @@ new WOW().init();
   </ul>
 </section>
 <script src="/js/script.js"></script>
-
-
-
-
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("zTDhPq9nvImrdSY5TaOaFrXU-gzGzoHsz", "UGcsGNXzQTAhlTTENHKpM2kG");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.article-title').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
 
 
