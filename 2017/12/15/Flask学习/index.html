@@ -128,6 +128,25 @@
 
 
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
   <link rel="canonical" href="https://shuaixiaohao.github.io/2017/12/15/Flask学习/"/>
 
 
@@ -1007,7 +1026,7 @@
                   <span class="links-of-author-item">
                     <a href="https://www.zhihu.com/people/shuaixiaohao" target="_blank" title="知乎">
                       
-                        <i class="fa fa-fw fa-/images/zhihu"></i>知乎</a>
+                        <i class="fa fa-fw fa-/images/zhihu.png"></i>知乎</a>
                   </span>
                 
             </div>
