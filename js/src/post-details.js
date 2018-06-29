@@ -97,3 +97,11 @@ $(document).ready(function () {
       }) : NexT.utils.displaySidebar();
   }
 });
+
+
+
+
+
+
+
+$('.fa-zhihu').attr('src', '/images/zhihu/png');
