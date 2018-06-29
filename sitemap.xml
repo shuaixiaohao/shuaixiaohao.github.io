@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://shuaixiaohao.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-06-29T15:58:35.049Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuaixiaohao.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-06-29T15:58:03.598Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://shuaixiaohao.github.io/2017/12/15/Flask%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-06-27T15:39:04.718Z</lastmod>
@@ -33,20 +47,6 @@
     <loc>https://shuaixiaohao.github.io/about/index.html</loc>
     
     <lastmod>2018-06-23T12:25:29.591Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuaixiaohao.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-06-23T12:23:42.958Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuaixiaohao.github.io/tags/index.html</loc>
-    
-    <lastmod>2018-06-23T12:22:37.868Z</lastmod>
     
   </url>
   
