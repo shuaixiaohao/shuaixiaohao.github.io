@@ -1063,6 +1063,15 @@
           
 
   
+ 	<div id="gitalk-container"></div>
+
+
+
+
+
+
+  
+
 
 
 
@@ -1419,6 +1428,24 @@
 
 
 
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '02e98d4fe2acfa75f722',
+          clientSecret: '4fe3f0b2f74b9ff99587c5f3c1e1717db5222be7',
+          repo: 'shuaixiaohao.github.io',
+          owner: 'shuaixiaohao',
+          admin: ['shuaixiaohao'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
   
 
   <script type="text/javascript">
@@ -1746,7 +1773,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("", "");</script>
+  <script>AV.initialize("zTDhPq9nvImrdSY5TaOaFrXU-gzGzoHsz", "UGcsGNXzQTAhlTTENHKpM2kG");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
