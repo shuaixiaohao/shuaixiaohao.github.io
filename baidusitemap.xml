@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://fenghao1994.coding.me/2017/12/15/Flask%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2019-02-01T11:56:14.981Z</lastmod>
+    <data>
+        <display>
+        <title>Flask</title>
+        <pubTime>2017-12-15T10:29:31.000Z</pubTime>
+        
+        <tag>Flask</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web框架" url="https://fenghao1994.coding.me/categories/Web%E6%A1%86%E6%9E%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://fenghao1994.coding.me/2017/12/15/Django/</loc>
     <lastmod>2019-02-01T11:53:48.354Z</lastmod>
     <data>
@@ -25,7 +45,7 @@
     
   <url>
     <loc>https://fenghao1994.coding.me/2018/01/21/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2019-02-01T11:49:29.827Z</lastmod>
+    <lastmod>2019-02-01T11:50:59.381Z</lastmod>
     <data>
         <display>
         <title>数据分析</title>
@@ -37,26 +57,6 @@
            
              
               <breadCrumb title="数据分析" url="https://fenghao1994.coding.me/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://fenghao1994.coding.me/2017/12/15/Flask%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2019-02-01T11:15:40.050Z</lastmod>
-    <data>
-        <display>
-        <title>Flask</title>
-        <pubTime>2017-12-15T10:29:31.000Z</pubTime>
-        
-        <tag>Flask</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web框架" url="https://fenghao1994.coding.me/categories/Web%E6%A1%86%E6%9E%B6/"/>
           
         </display>
     </data>
