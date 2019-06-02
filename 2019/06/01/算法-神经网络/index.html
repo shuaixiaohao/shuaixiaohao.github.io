@@ -94,11 +94,15 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/001.png">
 <meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/002.jpg">
-<meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/003.jpg">
-<meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/004.jpg">
+<meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/007.png">
+<meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/008.png">
+<meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/009.png">
+<meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/010.png">
+<meta property="og:image" content="https://shuaixiaohao.github.io/2019/06/01/算法-神经网络/blog-image/neural%20network/003.jpg">
+<meta property="og:image" content="https://shuaixiaohao.github.io/2019/06/01/算法-神经网络/blog-image/neural%20network/004.jpg">
 <meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/005.png">
 <meta property="og:image" content="https://shuaixiaohao.github.io/blog-image/neural%20network/006.png">
-<meta property="og:updated_time" content="2019-06-02T05:34:51.851Z">
+<meta property="og:updated_time" content="2019-06-02T08:34:25.776Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神经网络">
 <meta name="twitter:description" content="神经网络-算法类似于神经元的神经网络，效果如下：">
@@ -345,13 +349,30 @@
 <p> $a_{2}^{(2)}=g\left(\theta_{20}^{(1)} x_{0}+\theta_{21}^{(1)} x_{1}+\theta_{22}^{(1)} x_{2}+\theta_{23}^{(1)} x_{3}\right)$    </p>
 <p> $a_{3}^{(2)}=g\left(\theta_{30}^{(1)} x_{0}+\theta_{31}^{(1)} x_{1}+\theta_{32}^{(1)} x_{2}+\theta_{33}^{(1)} x_{3}\right)$     </p>
 <p> $h_{\theta}(x)=g\left(\theta_{10}^{(2)} a_{0}^{(2)}+\theta_{11}^{(2)} a_{1}^{(2)}+\theta_{12}^{(2)} a_{2}^{(2)}+\theta_{13}^{(2)} a_{3}^{(2)}\right)$     </p>
+<p>每一个 $a$ 都是由上一层所有的 $x$ 和每一个 $x$ 所对应的决定的。（我们把这样从左到右的算法称为前向传播算法( <strong>FORWARD PROPAGATION</strong> )）</p>
+<p>把 $x$ , $\theta$ , $a$ 分别用矩阵表示，我们可以得到 $\theta \cdot X=a$ ：</p>
+<p><img src="/blog-image/neural network/007.png" alt></p>
+<p>相对于使用循环来编码，利用向量化的方法会使得计算更为简便。以上面的神经网络为例，试着计算第二层的值：</p>
+<p><img src="/blog-image/neural network/008.png" alt></p>
+<p> $z^{(2)}=\theta^{(1)} x$      </p>
+<p> $a^{(2)}=g\left(z^{(2)}\right)$      </p>
+<p><img src="/blog-image/neural network/009.png" alt></p>
+<p>我们令 $z^{(2)}=\theta^{(1)} x$ ，则 $a^{(2)}=g\left(z^{(2)}\right)$ ，计算后添加 $a_{0}^{(2)}=1$ 。 计算输出的值为： </p>
+<p><img src="/blog-image/neural network/010.png" alt></p>
+<p>我们令 $z^{(3)}=\theta^{(2)} a^{(2)}$ ，则 $h_{\theta}(x)=a^{(3)}=g\left(z^{(3)}\right)$  </p>
+<p>这只是针对训练集中一个训练实例所进行的计算。如果我们要对整个训练集进行计算，我们需要将训练集特征矩阵进行转置，使得同一个实例的特征都在同一列里。即：</p>
+<p>  $z^{(2)}=\theta^{(1)} \times X^{T}$    </p>
+<p>  $a^{(2)}=g\left(z^{(2)}\right)$     </p>
+<p>其实神经网络就像是<strong>logistic regression</strong>，只不过我们把<strong>logistic regression</strong>中的输入向量 $\left[x_{1} \sim x_{3}\right]$ 变成了中间层的 $\left[a_{1}^{(2)} \sim a_{3}^{(2)}\right]$ , 即: </p>
+<p>  $h_{\theta}(x)=g\left(\theta_{0}^{(2)} a_{0}^{(2)}+\theta_{1}^{(2)} a_{1}^{(2)}+\theta_{2}^{(2)} a_{2}^{(2)}+\theta_{3}^{(2)} a_{3}^{(2)}\right)$     </p>
+<p>我们可以把 $a_{0}$ , $a_{1}$ , $a_{2}$ , $a_{3}$ 看成更为高级的特征值，也就是 $x_{0}$ , $x_{1}$ , $x_{2}$ ,$x_{3}$ 的进化体，并且它们是由 $x$ 与决定的，因为是梯度下降的，所以 $a$ 是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将 $x$ 次方厉害，也能更好的预测新数据</p>
 <h3 id="反向传播算法"><a href="#反向传播算法" class="headerlink" title="反向传播算法"></a>反向传播算法</h3><p>之前我们在计算神经网络预测结果的时候我们采用了一种正向传播方法，我们从第一层开始正向一层一层进行计算，直到最后一层的 $h_{\theta}(x)$ 。</p>
 <p>现在，为了计算代价函数的偏导数 $\frac{\partial}{\partial \theta_{i j}^{(l)}} J(\theta)$ ，我们需要采用一种反向传播算法，也就是首先计算最后一层的误差，然后再一层一层反向求出各层的误差，直到倒数第二层。</p>
 <p>以一个例子来说明反向传播算法。</p>
 <p>假设我们的训练集只有一个实例 $\left(x^{(1)}, y^{(1)}\right)$ ，我们的神经网络是一个四层的神经网络，其中 $K=4$ , $S_{L}=4$ , $L=4$ :</p>
 <p>前向传播算法：</p>
-<p>​    <img src="/blog-image/neural%20network/003.jpg" alt></p>
-<p>​    <img src="/blog-image/neural%20network/004.jpg" alt></p>
+<p>​    <img src="blog-image/neural%20network/003.jpg" alt></p>
+<p>​    <img src="blog-image/neural%20network/004.jpg" alt></p>
 <p>下面的公式推导过程见：</p>
 <p><a href="https://blog.csdn.net/qq_29762941/article/details/80343185" target="_blank" rel="noopener">链接</a></p>
 <p>我们从最后一层的误差开始计算，误差是激活单元的预测（${a^{(4)}}$）与实际值（$y^k$）之间的误差，（$k=1:k$）。<br>我们用$\delta$来表示误差，则：$\delta^{(4)}=a^{(4)}-y$<br>我们利用这个误差值来计算前一层的误差：$\delta^{(3)}=\left({\Theta^{(3)}}\right)^{T}\delta^{(4)}\ast g’\left(z^{(3)}\right)$<br>其中 $g’(z^{(3)})$是 $S$ 形函数的导数，$g’(z^{(3)})=a^{(3)}\ast(1-a^{(3)})$ 。而 $(θ^{(3)})^{T}\delta^{(4)}$ 则是权重导致的误差的和。下一步是继续计算第二层的误差：<br>$ \delta^{(2)}=(\Theta^{(2)})^{T}\delta^{(3)}\ast g’(z^{(2)})$<br>因为第一层是输入变量，不存在误差。我们有了所有的误差的表达式后，便可以计算代价函数的偏导数了，假设$λ=0$，即我们不做任何正则化处理时有：<br>$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=a_{j}^{(l)} \delta_{i}^{l+1}$</p>
@@ -1260,7 +1281,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

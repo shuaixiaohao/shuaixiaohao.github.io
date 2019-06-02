@@ -608,6 +608,7 @@
 </ol>
 <p><strong>四种采集方式</strong> </p>
 <p>四种采集方式的比较</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -644,6 +645,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <p>说明：Beautiful的解析器包括：Python标准库（html.parser）、lxml的HTML解析器、lxml的XML解析器和html5lib。</p>
 </blockquote>
@@ -669,6 +671,7 @@
 <p>bookstore 的后代是 book、title、author、year 以及 price 元素</p>
 <p><strong>选取节点</strong></p>
 <p>XPath 使用路径表达式在 XML 文档中选取节点。节点是通过沿着路径或者 step 来选取的。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -703,8 +706,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>选取未知节点</strong> </p>
 <p>XPath 通配符可用来选取未知的 XML 元素。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -727,11 +732,12 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>选取若干路径</strong> </p>
 <p>通过在路径表达式中使用“|”运算符，您可以选取若干个路径。</p>
 <p>爬取搜狐体育：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_code</span><span class="params">(url)</span>:</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'</span></span><br><span class="line">    &#125;</span><br><span class="line">    req = urllib.request.Request(url, headers=headers)</span><br><span class="line">    res = urllib.request.urlopen(req)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_crawl</span><span class="params">(url)</span>:</span></span><br><span class="line">    res = get_code(url)</span><br><span class="line">    p1_url = re.findall(<span class="string">"&lt;a test=a href='(.+?)'"</span>, res.read().decode(<span class="string">'GBK'</span>))</span><br><span class="line">    <span class="keyword">return</span> p1_url</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_content</span><span class="params">(url)</span>:</span></span><br><span class="line">    res2 = get_code(url)</span><br><span class="line">    tree = etree.HTML(res2.read().decode(<span class="string">'utf-8'</span>))</span><br><span class="line">    p2_title = tree.xpath(<span class="string">'//*[@id="article-container"]/div[2]/div[1]/div[1]/h1/text()'</span>)</span><br><span class="line">    p2_content = tree.xpath(<span class="string">'//*[@id="mp-editor"]/p/text()'</span>)</span><br><span class="line">    <span class="keyword">return</span> p2_title, p2_content</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    url = <span class="string">'http://sports.sohu.com/nba_a.shtml'</span></span><br><span class="line">    p_urls = get_crawl(url)</span><br><span class="line">    <span class="keyword">for</span> p_url <span class="keyword">in</span> p_urls:</span><br><span class="line">        result = get_content(p_url)</span><br><span class="line">        print(result)</span><br></pre></td></tr></table></figure>
-<h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><p>Beautiful Soup 是一个可以从HTML或XML文件中提取数据的Python库.它能够通过你喜欢的转换器实现惯用的文档导航,查找,修改文档的方式.Beautiful Soup会帮你节省数小时甚至数天的工作时间.—–引入<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">官网地址</a>的一句话</p>
+<h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><p>Beautiful Soup 是一个可以从HTML或XML文件中提取数据的Python库.它能够通过你喜欢的转换器实现惯用的文档导航,查找,修改文档的方式.Beautiful Soup会帮你节省数小时甚至数天的工作时间.——-引入<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">官网地址</a>的一句话</p>
 <p><strong>安装</strong></p>
 <p>Beautiful Soup 4 通过PyPi发布,所以如果你无法使用系统包管理安装,那么也可以通过 easy_install 或 pip 来安装.包的名字是 beautifulsoup4 ,这个包兼容Python2和Python3.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install beautifulsoup4</span><br></pre></td></tr></table></figure>
@@ -944,8 +950,6 @@
 <h2 id="7、动态解析"><a href="#7、动态解析" class="headerlink" title="7、动态解析"></a>7、动态解析</h2><p>根据权威机构发布的全球互联网可访问性审计报告，全球约有四分之三的网站其内容或部分内容是通过JavaScript动态生成的，这就意味着在浏览器窗口中“查看网页源代码”时无法在HTML代码中找到这些内容，也就是说我们之前用的抓取数据的方式无法正常运转了。解决这样的问题基本上有两种方案：</p>
 <blockquote>
 <p>一是JavaScript逆向工程；</p>
-</blockquote>
-<blockquote>
 <p>另一种是渲染JavaScript获得渲染后的内容。</p>
 </blockquote>
 <h3 id="JavaScript逆向工程"><a href="#JavaScript逆向工程" class="headerlink" title="JavaScript逆向工程"></a>JavaScript逆向工程</h3><p>我们以<a href="https://movie.douban.com/explore#!type=movie&amp;tag=%E7%83%AD%E9%97%A8&amp;sort=recommend&amp;page_limit=20&amp;page_start=0" target="_blank" rel="noopener">豆瓣电影</a>为例，说明什么是JavaScript逆向工程。其实所谓的JavaScript逆向工程就是找到通过Ajax请求动态获取数据的接口。</p>
@@ -966,17 +970,9 @@
 <p>大概解释一下如下用法:</p>
 <blockquote>
 <p>find_element_by_name()是根据Name值获取</p>
-</blockquote>
-<blockquote>
 <p>ind_element_by_id()是根据ID获取</p>
-</blockquote>
-<blockquote>
 <p>find_element_by_xpath()是根据Xpath提取</p>
-</blockquote>
-<blockquote>
 <p>find_element_by_css_selector(‘#xxx’)是根据id=xxx来获取</p>
-</blockquote>
-<blockquote>
 <p>find_element()方法，它需要传入两个参数，一个是查找的方式By，另一个就是值，实际上它就是find_element_by_id()这种方法的通用函数版本。</p>
 </blockquote>
 <p>注意： from selenium.webdriver.common.by import By</p>
@@ -1052,11 +1048,7 @@
 <p>执行流程：</p>
 <blockquote>
 <p>name: spider对应不同的name</p>
-</blockquote>
-<blockquote>
 <p>start_urls:是spider抓取网页的起始点，可以包括多个url。</p>
-</blockquote>
-<blockquote>
 <p>parse()：spider抓到一个网页以后默认调用的callback，避免使用这个名字来定义自己的方法。当spider拿到url的内容以后，会调用parse方法，并且传递一个response参数给它，response包含了抓到的网页的内容，在parse方法里，你可以从抓到的网页里面解析数据。</p>
 </blockquote>
 <p>运行结果：</p>
@@ -1067,8 +1059,6 @@
 <p>缺点：</p>
 <blockquote>
 <p>a) 不易于扩展</p>
-</blockquote>
-<blockquote>
 <p>b) 如果发现你的项目代码中有bug的话，那么你的所有的服务器中的项目代码都是有问题的，这时候要更新这个bug的时候，就需要同时更新所有的服务器了。</p>
 </blockquote>
 <p>优点：</p>
@@ -1080,18 +1070,12 @@
 <p>缺点：</p>
 <blockquote>
 <p>a) 项目拆分的过于复杂，给运维带来了很高的维护成本</p>
-</blockquote>
-<blockquote>
 <p>b) 数据的一致性，分布式事务，分布式锁等问题不能得到很好的解决</p>
 </blockquote>
 <p>优点：</p>
 <blockquote>
 <p>a) 一个业务模块崩了，并不影响其他的业务</p>
-</blockquote>
-<blockquote>
 <p>b) 利于扩展</p>
-</blockquote>
-<blockquote>
 <p>c) 在上线某个新功能的时候，只需要新增对应的分布式的节点即可，测试也只需要测试该业务功能即可。很好的避免了测试在上线之前需要将整个系统进行全方面的测试</p>
 </blockquote>
 <h3 id="1-scrapy的分布式原理"><a href="#1-scrapy的分布式原理" class="headerlink" title="1. scrapy的分布式原理"></a>1. scrapy的分布式原理</h3><p>我们还是先回顾下scrapy的运行原理的构造图:</p>
@@ -2075,7 +2059,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

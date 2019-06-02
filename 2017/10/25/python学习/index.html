@@ -469,7 +469,7 @@
 <p><code>list1.clear()</code>     清除列表中所有的元素</p>
 <p><code>list1.reverse()</code>     用于反向列表中元素  等同于[::-1]</p>
 <p><em>reversed(seq) 函数返回一个反转的迭代器。</em> </p>
-<p><em>seq – 要转换的序列，可以是 tuple, string, list 或 range</em></p>
+<p><em>seq — 要转换的序列，可以是 tuple, string, list 或 range</em></p>
 <p><code>list1.sort()</code>    应用在 list 上的方法, 返回的是对已经存在的列表进行操作</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">4</span>, <span class="number">1</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">2</span>, <span class="number">7</span>]</span><br><span class="line"><span class="comment"># print(list1.sort()) 打印为None,没有返回值,只对原来列表排序</span></span><br><span class="line">list2 = list1.sort()</span><br><span class="line">print(list2) 	 <span class="comment">#结果还是为None </span></span><br><span class="line">print(list1) 	 <span class="comment">#[1, 2, 4, 7, 21, 45]</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#    0  1  2  3  4  5  6  7  8</span></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">b = a[<span class="number">7</span>:<span class="number">3</span>:<span class="number">-1</span>]</span><br><span class="line">print(b)			<span class="comment">#[8, 7, 6, 5]</span></span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">3</span>:<span class="number">-1</span>])	 <span class="comment">#None</span></span><br><span class="line">print(a[<span class="number">3</span>:<span class="number">1</span>:<span class="number">-1</span>])	 <span class="comment">#[4, 3]</span></span><br></pre></td></tr></table></figure>
@@ -516,8 +516,8 @@
 <p><u>字符串，列表或元组对象都可用于创建迭代器</u></p>
 <h4 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h4><p> <strong>yield</strong> 函数被称为生成器（generator）, 生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器 , 每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值, 并在下一次执行 next() 方法时从当前位置继续运行。调用一个生成器函数，返回的是一个迭代器对象。</p>
 <hr>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>*args    <strong>可变参数</strong>(参数不确定) - 元组</p>
-<p>**kwargs    <strong>关键字参数</strong>(给了参数名和参数值的参数) - 字典 </p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><em>args    <em>*可变参数</em></em>(参数不确定) - 元组</p>
+<p>*<em>kwargs    <em>*关键字参数</em></em>(给了参数名和参数值的参数) - 字典 </p>
 <h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>python 使用 lambda 来创建匿名函数。</p>
 <p>所谓匿名，意即不再使用 def 语句这样标准的形式定义一个函数。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> [arg1 [,arg2,.....argn]]:expression  <span class="comment">#arg-参数 ,expression-表达式</span></span><br></pre></td></tr></table></figure>
@@ -534,7 +534,8 @@
 <p>当内部作用域想修改外部作用域的变量时，就要用到global和nonlocal关键字了</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">random.choice():返回列表,元祖,字典中的某一个值</span><br><span class="line">random.choices():返回列表,元祖,字典中的指定个数值个值 k 关键字参数</span><br><span class="line">random.random():返回<span class="number">0</span><span class="number">-1</span>之间的数,  [<span class="number">0</span>, <span class="number">1</span>)  </span><br><span class="line">random.uniform():返回指定的一个区间范围的随机数 [, )</span><br><span class="line">random.randint():返回指定区间范围的随机整数 [, ]</span><br><span class="line">random.shuffle():将列表中的数据进行打乱排序</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 不定长参数: *args</span><br><span class="line">2. 关键字参数: **kw</span><br><span class="line">3. 偏函数: 导入模块 import functools</span><br><span class="line">        functools.partical()就是创建一个新的函数.不需要自行定义函数.直接将结果赋值给一个变量,而		  这个变量就是一个函数.这个函数的目的是将默认参数给固定住</span><br><span class="line">4. 回调函数: 定义函数时,将函数名作为参数传递过来,然后在函数里边再次调用函数</span><br></pre></td></tr></table></figure>
-<h4 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h4><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><table>
+<h4 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h4><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>符号</th>
@@ -621,9 +622,9 @@
 <td>可以匹配任一元音字母字符</td>
 </tr>
 <tr>
-<td>[^]</td>
+<td><sup><a href="#fn_" id="reffn_"></a></sup></td>
 <td>匹配不在字符集中的任意单一字符</td>
-<td>[^aeiou]</td>
+<td><sup><a href="#fn_aeiou" id="reffn_aeiou">aeiou</a></sup></td>
 <td>可以匹配任一非元音字母字符</td>
 </tr>
 <tr>
@@ -749,8 +750,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>re模块中的核心函数</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">re.match(pattern, string, flags=<span class="number">0</span>)</span><br><span class="line">pattern		匹配的正则表达式</span><br><span class="line">string		要匹配的字符串</span><br><span class="line">flags		标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等</span><br></pre></td></tr></table></figure>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -805,6 +808,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <hr>
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p><strong>面向对象的三个基本特征是：封装、继承、多态</strong> </p>
 <p><strong>封装：</strong></p>
@@ -836,7 +840,7 @@
 <p><strong>数据抽象</strong>一找到和对象相关的数据一属性( 名词）</p>
 <p><strong>行为抽象</strong>一  找到和对象相关的行为一方法（动词）</p>
 <p> <strong>__slots__</strong></p>
-<p>​    限定自定义类型的对象只能绑定某些属性，可以通过在类中定义_<em>slots\</em>_变量来进行限定。需要注意的是__slots__的限定只对当前类的对象生效，对子类并不起任何作用。 </p>
+<p>​    限定自定义类型的对象只能绑定某些属性，可以通过在类中定义__slots__变量来进行限定。需要注意的是__slots__的限定只对当前类的对象生效，对子类并不起任何作用。 </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment"># 限定Person对象只能绑定_name, _age和_gender属性</span></span><br><span class="line">    __slots__ = (<span class="string">'_name'</span>, <span class="string">'_age'</span>, <span class="string">'_gender'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h3><p>区分开函数和方法的含义：</p>
 <p>　　1.函数：类外部定义的，跟类没有直接关系的；形式： def func(*argv):</p>
@@ -852,17 +856,17 @@
 <ul>
 <li>__new__ 是在一个对象实例化的时候所调用的第一个方法 </li>
 <li>它的第一个参数是这个类，其他的参数是用来直接传递给 __init__ 方法 </li>
-<li>_<em>new__ 决定是否要使用该 \</em>_init__方法，因为 __new__ 可以调用其他类的构造方法或者直接返回别的实例对象来作为本类的实例，如果 __new__ 没有返回实例对象，则 __init__ 不会被调用 </li>
+<li>__new<strong> 决定是否要使用该 __init__方法，因为 __new</strong> 可以调用其他类的构造方法或者直接返回别的实例对象来作为本类的实例，如果 __new<strong> 没有返回实例对象，则 __init</strong> 不会被调用 </li>
 <li>__new__ 主要是用于继承一个不可变的类型比如一个 tuple 或者 string </li>
 </ul>
 <p><strong>__init__(self,[…])</strong> </p>
 <ul>
 <li><p>类的初始化方法 ，当一个实例对象被定义时调用 </p>
-<p>*__del__(self)**    </p>
+<p><em>__del__(self)*</em>    </p>
 </li>
 <li><p>析构器，当一个实例被析构时调用 </p>
 </li>
-<li><p>_<em>new__ 和 \</em>_init__ 是对象的构造器， __del__ 是对象的销毁器 </p>
+<li><p>__new<strong> 和 __init</strong> 是对象的构造器， __del__ 是对象的销毁器 </p>
 </li>
 </ul>
 <h3 id="Python内置装饰器"><a href="#Python内置装饰器" class="headerlink" title="Python内置装饰器"></a>Python内置装饰器</h3><p>在Python中有三个内置的装饰器，都是跟class相关的：<strong>staticmethod</strong>、<strong>classmethod</strong> 和<strong>property</strong>。</p>
@@ -954,11 +958,11 @@
 <h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p>Python的标准库提供了两个模块：<code>_thread</code> 和 <code>threading</code>，<code>_thread</code> 是低级模块，<code>threading</code> 是高级模块，对  <code>_thread</code> 进行了封装。绝大多数情况下，我们只需要使用 <code>threading</code> 这个高级模块。 </p>
 <p>启动一个线程就是把一个函数传入并创建 <code>Thread</code> 实例，然后调用 <code>start()</code> 开始执行 </p>
 <h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><p>协议- protocol- 通信双方对话的规范和标准</p>
-<p>IP.Internet Protocol- 寻址和路由<br><a href="http://www.baidu.com---&gt;" target="_blank" rel="noopener">www.baidu.com---&gt;</a> 180.97.33.108</p>
-<p>TCP和UDP是在IP协议之上构建的传输协议它们能够提供传输数据的服务<br>TCP提供了可靠传输服务<br>TCP- Transfer Control Protocol<br>握手机制+冗余校验—&gt; 重发一次</p>
+<p>IP.Internet Protocol- 寻址和路由<br>www.baidu.com—-&gt; 180.97.33.108</p>
+<p>TCP和UDP是在IP协议之上构建的传输协议它们能够提供传输数据的服务<br>TCP提供了可靠传输服务<br>TCP- Transfer Control Protocol<br>握手机制+冗余校验—-&gt; 重发一次</p>
 <p>TCP.Transfer Control Protocol  I<br>1.可靠通信[数据不传丢也不传错]<br>滑动窗口机制<br>2.流量控制(自动调节发送数据的速度<br>3.拥塞控制(网络拥堵时会降低发送速度)</p>
-<p>  QQ 微信.应用级<br>QQ— ICQ— OICQ<br>HTTP— Hyper-Text Transfer Protocol<br>HTTPS— Secure<br>SMTP– Simple Mail Transfer Protocol<br>POP3— Post Office Protocol version 3<br>IMAP—Internet Mail Access Protocol<br>xerox— macintosh— Windows</p>
-<p>URL— Uniform Resource Locator<br>协议://域名或IP地址:80/路径/资源名</p>
+<p>  QQ 微信.应用级<br>QQ—- ICQ—- OICQ<br>HTTP—- Hyper-Text Transfer Protocol<br>HTTPS—- Secure<br>SMTP— Simple Mail Transfer Protocol<br>POP3—- Post Office Protocol version 3<br>IMAP—-Internet Mail Access Protocol<br>xerox—- macintosh—- Windows</p>
+<p>URL—- Uniform Resource Locator<br>协议://域名或IP地址:80/路径/资源名</p>
 <p>网络API(应用程序编程接口) / 网络</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">requests.get()用于请求目标网站，类型是一个HTTPresponse类型</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">response = requests.get(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line">print(response.status_code) <span class="comment"># 打印状态码</span></span><br><span class="line">print(response.url) <span class="comment"># 打印请求url</span></span><br><span class="line">print(response.headers) <span class="comment"># 打印头信息</span></span><br><span class="line">print(response.cookies) <span class="comment"># 打印cookie信息</span></span><br><span class="line">print(response.text) <span class="comment">#以文本形式打印网页源码</span></span><br><span class="line">print(response.content) <span class="comment">#以字节流形式打印</span></span><br></pre></td></tr></table></figure>
 <h3 id="TCP编程"><a href="#TCP编程" class="headerlink" title="TCP编程"></a>TCP编程</h3><p><strong>Socket</strong>是网络编程的一个抽象概念。通常我们用一个Socket表示“打开了一个网络链接”，而打开一个Socket需要知道目标计算机的IP地址和端口号，再指定协议类型即可。 </p>
@@ -1914,7 +1918,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

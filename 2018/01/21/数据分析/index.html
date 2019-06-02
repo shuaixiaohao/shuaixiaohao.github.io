@@ -580,6 +580,7 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ndarr3 = np.random.randint(<span class="number">0</span>,<span class="number">100</span>,size=<span class="number">15</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>array([<span class="number">89</span>,  <span class="number">2</span>, <span class="number">20</span>, <span class="number">55</span>, <span class="number">76</span>, <span class="number">96</span>, <span class="number">92</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">92</span>, <span class="number">13</span>, <span class="number">65</span>, <span class="number">15</span>, <span class="number">10</span>, <span class="number">52</span>])</span><br><span class="line"></span><br><span class="line">numpy.partition(ndarr3,<span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>array([ <span class="number">2</span>, <span class="number">10</span>, <span class="number">13</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">52</span>, <span class="number">92</span>, <span class="number">92</span>, <span class="number">96</span>, <span class="number">65</span>, <span class="number">76</span>, <span class="number">55</span>, <span class="number">89</span>]) <span class="comment"># 前面三个最小排序</span></span><br><span class="line"></span><br><span class="line">numpy.partition(ndarr3,<span class="number">-5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>array([ <span class="number">2</span>, <span class="number">22</span>, <span class="number">20</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">23</span>, <span class="number">52</span>, <span class="number">55</span>, <span class="number">65</span>, <span class="number">76</span>, <span class="number">89</span>, <span class="number">92</span>, <span class="number">96</span>, <span class="number">92</span>]) <span class="comment"># 后面五个最大排序</span></span><br></pre></td></tr></table></figure>
 <h2 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h2><p>以下函数用于对<code>dtype</code>为<code>numpy.string_</code>或<code>numpy.unicode_</code>的数组执行向量化字符串操作。 它们基于 Python 内置库中的标准字符串函数。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -646,6 +647,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>这些函数在字符数组类(<code>numpy.char</code>)中定义。 较旧的 Numarray 包包含<code>chararray</code>类。 <code>numpy.char</code>类中的上述函数在执行向量化字符串操作时非常有用。</p>
 <h3 id="numpy-char-add"><a href="#numpy-char-add" class="headerlink" title="numpy.char.add()"></a><code>numpy.char.add()</code></h3><p>函数执行按元素的字符串连接。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np </span><br><span class="line">print &apos;连接两个字符串：&apos; </span><br><span class="line">print np.char.add([&apos;hello&apos;],[&apos; xyz&apos;]) </span><br><span class="line">print &apos;\n&apos;</span><br><span class="line"></span><br><span class="line">print &apos;连接示例：&apos; </span><br><span class="line">print np.char.add([&apos;hello&apos;, &apos;hi&apos;],[&apos; abc&apos;, &apos; xyz&apos;])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Python</span><br></pre></td></tr></table></figure>
@@ -731,6 +733,7 @@
 <p>这些数据结构构建在<em>Numpy</em>数组之上，这意味着它们很快。</p>
 <p><strong>维数和描述</strong> </p>
 <p>考虑这些数据结构的最好方法是，较高维数据结构是其较低维数据结构的容器。 例如，<code>DataFrame</code>是<code>Series</code>的容器，<code>Panel</code>是<code>DataFrame</code>的容器。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -757,6 +760,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>构建和处理两个或更多个维数组是一项繁琐的任务，用户在编写函数时要考虑数据集的方向。 但是使用<em>Pandas</em>数据结构，减少了用户的思考。</p>
 <p>例如，使用表格数据(<code>DataFrame</code>)，在语义上更有用于考虑索引(行)和列，而不是轴<code>0</code>和轴<code>1</code>。</p>
 <p><strong>可变性</strong></p>
@@ -838,6 +842,7 @@
 <p><em>pandas</em>中的<code>DataFrame</code>可以使用以下构造函数创建 -</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandas.DataFrame( data, index, columns, dtype, copy)</span><br></pre></td></tr></table></figure>
 <p>构造函数的参数如下 -</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -874,26 +879,27 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="1-DataFrame的创建"><a href="#1-DataFrame的创建" class="headerlink" title="1. DataFrame的创建"></a>1. DataFrame的创建</h3><p>最常用的方法是传递一个字典来创建。DataFrame以字典的键作为每一【列】的名称，以字典的值（一个数组）作为每一列。</p>
 <p>此外，DataFrame会自动加上每一行的索引（和Series一样）。</p>
 <p>同Series一样，若传入的列与字典的键不匹配，则相应的值为NaN。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame</span><br><span class="line"></span><br><span class="line">data = np.random.randint(<span class="number">0</span>,<span class="number">150</span>,size=(<span class="number">4</span>,<span class="number">4</span>))</span><br><span class="line">index = [<span class="string">'张三'</span>,<span class="string">'李四'</span>,<span class="string">'王五'</span>,<span class="string">'小六'</span>]</span><br><span class="line">df = DataFrame(data, index=index,columns=[<span class="string">'Math'</span>,<span class="string">'Chinese'</span>,<span class="string">'English'</span>,<span class="string">'Python'</span>])</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">			Math	Chinese	English	Python</span><br><span class="line">	张三		<span class="number">41</span>		<span class="number">47</span>		<span class="number">19</span>		<span class="number">114</span></span><br><span class="line">	李四		<span class="number">16</span>		<span class="number">43</span>		<span class="number">77</span>		<span class="number">115</span></span><br><span class="line">	王五		<span class="number">116</span>		<span class="number">148</span>		<span class="number">92</span>		<span class="number">74</span></span><br><span class="line">	小六		<span class="number">93</span>		<span class="number">72</span>		<span class="number">26</span>		<span class="number">59</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-DataFrame的索引"><a href="#2-DataFrame的索引" class="headerlink" title="2. DataFrame的索引"></a>2. DataFrame的索引</h3><p>(1) 对 <strong>列</strong> 进行索引</p>
-<p>​    –  通过类似字典的方式</p>
-<p>​    –  通过属性的方式</p>
+<p>​    —  通过类似字典的方式</p>
+<p>​    —  通过属性的方式</p>
 <p>可以将DataFrame的列获取为一个Series。返回的Series拥有原DataFrame相同的索引，且name属性也已经设置好了，就是相应的列名。</p>
 <p><em>每一行是一个样本   每一列是描述这个样本的维度</em>  </p>
 <p>(2) 对 <strong>行</strong> 进行索引</p>
-<p>​    –  使用.loc[]加index来进行行索引</p>
-<p>​    –  使用.iloc[]加整数来进行行索引</p>
+<p>​    —  使用.loc[]加index来进行行索引</p>
+<p>​    —  使用.iloc[]加整数来进行行索引</p>
 <p>同样返回一个Series，index为原来的columns。</p>
 <p><strong>总结：</strong> </p>
 <p>​    <u>columns 才能以索引的形式去找 df [“列名”] 、df.列名</u></p>
 <p>​    <u>index 不能用索引的方式去找 只能用 loc[] 和 iloc[] 去定位内容</u> </p>
 <p>(3) 对元素进行索引</p>
-<p>​    –  使用列索引</p>
-<p>​    –  使用行索引( iloc[3,1]相当于两个参数; iloc[[3,3]] 里面的[3,3]看做一个参数)</p>
-<p>​    –  使用values属性（二维numpy数组）</p>
+<p>​    —  使用列索引</p>
+<p>​    —  使用行索引( iloc[3,1]相当于两个参数; iloc[[3,3]] 里面的[3,3]看做一个参数)</p>
+<p>​    —  使用values属性（二维numpy数组）</p>
 <p>【注意】 直接用中括号 [ ] 时：</p>
 <ul>
 <li>索引表示的是列索引</li>
@@ -908,6 +914,7 @@
 <li>如果索引不对应，则补NaN</li>
 </ul>
 <p>下面是Python 操作符与pandas操作函数的对应表：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -946,13 +953,14 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>（3） DataFrame和Series之间的运算 </p>
 <p>【重要】</p>
 <ul>
 <li><p>使用Python操作符：以行为单位操作（参数必须是行），对所有行都有效。（类似于numpy中二维数组与一维数组的运算，但可能出现NaN）</p>
 </li>
 <li><p>使用pandas操作函数：</p>
-<p>​    –  axis=0：以列为单位操作（参数必须是列），对所有列都有效。</p>
+<p>​    —  axis=0：以列为单位操作（参数必须是列），对所有列都有效。</p>
 <pre><code>--  axis=1：以行为单位操作（参数必须是行），对所有行都有效。
 </code></pre></li>
 </ul>
@@ -963,7 +971,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dropna(axis, how)    <span class="comment"># axis 删除有NaN的行还是列，how 要有NaN就删 还是全都是NaN才删</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">df1.dropna() <span class="comment"># 如果有空值 就把整行都干掉</span></span><br><span class="line">df1.dropna(axis=<span class="number">0</span>) <span class="comment"># 默认是对行进行处理</span></span><br><span class="line">df1.dropna(axis=<span class="number">1</span>) <span class="comment"># 对有空值的列进行处理</span></span><br><span class="line"></span><br><span class="line">df1.dropna(how=<span class="string">"any"</span>) <span class="comment"># 只要有空值 就干掉</span></span><br><span class="line">df1.dropna(how=<span class="string">"all"</span>) <span class="comment"># 这一行所有的值都是空值 才干掉</span></span><br></pre></td></tr></table></figure>
 <h3 id="填充缺少数据"><a href="#填充缺少数据" class="headerlink" title="填充缺少数据"></a>填充缺少数据</h3><p>​    <code>fillna()</code>函数可以用非空数据“填充”<code>NaN</code>值 </p>
-<p>​    –  value ：指定填充的值<br>    –  method ：指定找前面还是找后面<br>    –  axis ：指定是横着找还是竖着找<br>    –  limit：限定往前/后找几个</p>
+<p>​    —  value ：指定填充的值<br>    —  method ：指定找前面还是找后面<br>    —  axis ：指定是横着找还是竖着找<br>    —  limit：限定往前/后找几个</p>
 <p>注意：value参数是不能跟method参数共用的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">df1.fillna(value=0) # 遇到空值 可以设置成我们制定的值</span><br><span class="line">df1.fillna(value=10)  # 可以指定value值</span><br><span class="line"></span><br><span class="line"># pad / ffill 从前面找值来填充</span><br><span class="line"># backfill/ bfill 从后面找值来填充</span><br><span class="line">df1.fillna(method=&quot;ffill&quot;)</span><br><span class="line">df1.fillna(method=&quot;bfill&quot;)</span><br><span class="line"></span><br><span class="line">df1.fillna(method=&quot;ffill&quot;,axis=0) # axis 默认是0 竖直找</span><br><span class="line">df1.fillna(method=&quot;ffill&quot;,axis=1) # axis 1 水平找</span><br><span class="line"></span><br><span class="line">df1.fillna(method=&quot;ffill&quot;,limit=2) # 限制往前找几个</span><br></pre></td></tr></table></figure>
 <h2 id="多层索引"><a href="#多层索引" class="headerlink" title="多层索引"></a>多层索引</h2><h3 id="多层行索引"><a href="#多层行索引" class="headerlink" title="多层行索引"></a>多层行索引</h3><p><strong>创建MultiIndex（分层索引）对象</strong> </p>
@@ -989,7 +997,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.stack(level=<span class="number">0</span>) <span class="comment"># level 索引的级别 默认是-1 -1就是最里面的  level的值 从外到内 0 1 2 3</span></span><br></pre></td></tr></table></figure>
 <p><strong>unstack()</strong> </p>
 <p>​    index -&gt; columns 行标题变列标题（数据也会跟着标题走）</p>
-<h2 id="聚合操作"><a href="#聚合操作" class="headerlink" title="聚合操作"></a>聚合操作</h2><table>
+<h2 id="聚合操作"><a href="#聚合操作" class="headerlink" title="聚合操作"></a>聚合操作</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>功能</th>
@@ -1019,6 +1028,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 如果想对 行进行聚合操作 可以调整 axis</span><br><span class="line">df.sum(axis=0) # axis 默认值是0 是对列做加和</span><br><span class="line">df.sum(axis=1)</span><br></pre></td></tr></table></figure>
 <h2 id="合并、连接"><a href="#合并、连接" class="headerlink" title="合并、连接"></a>合并、连接</h2><p>pandas的拼接分为两种：</p>
 <ul>
@@ -1035,8 +1045,8 @@
 <li><p>axis 拼接的时候是沿着什么方向 默认值是0 纵向 如果是1就是横向</p>
 </li>
 <li><p>join 指定了拼接的方式 默认是outer</p>
-<p>–  outer 外联 所有的列都会拼进来</p>
-<p>–  inner 内联 只有那些两个DataFrame都有的列才会拼进来</p>
+<p>—  outer 外联 所有的列都会拼进来</p>
+<p>—  inner 内联 只有那些两个DataFrame都有的列才会拼进来</p>
 </li>
 <li><p>join_axes 直接指定那些列要放进来</p>
 </li>
@@ -1077,24 +1087,24 @@
 <li><p><em>right_index</em> - 与右DataFrame的<em>left_index</em>具有相同的用法。</p>
 </li>
 <li><p><em>how</em> - 它是<em>left</em>, <em>right</em>, <em>outer</em>以及<em>inner</em>之中的一个，默认为内<em>inner</em>。 </p>
-<p>–  inner  是取交集 两个都有的项目才出现</p>
-<p>–  outer 是取并集 任何一个表格里出现的项目都会出现</p>
-<p>–  left  左边的表格有多少项目 这里就有多少项目</p>
-<p>–  right  右边的表格有多少项目 这里就有多少项目</p>
+<p>—  inner  是取交集 两个都有的项目才出现</p>
+<p>—  outer 是取并集 任何一个表格里出现的项目都会出现</p>
+<p>—  left  左边的表格有多少项目 这里就有多少项目</p>
+<p>—  right  右边的表格有多少项目 这里就有多少项目</p>
 </li>
 <li><p><em>sort</em> - 按照字典顺序通过连接键对结果DataFrame进行排序。默认为<code>True</code>，设置为<code>False</code>时，在很多情况下大大提高性能。</p>
 </li>
 </ul>
 <p><strong>key的规范化</strong> </p>
-<p>​    –  使用on=显式指定哪一列为key,当有多个key相同时使用</p>
-<p>​    –  使用left_on和right_on指定左右两边的列作为key，当左右两边的key都不想等时使用</p>
+<p>​    —  使用on=显式指定哪一列为key,当有多个key相同时使用</p>
+<p>​    —  使用left_on和right_on指定左右两边的列作为key，当左右两边的key都不想等时使用</p>
 <p><strong>内合并与外合并</strong> </p>
-<p>​    –  内合并：只保留两者都有的key（默认模式）</p>
-<p>​    –  外合并 how=’outer’：补NaN</p>
-<p>​    –  左合并、右合并：how=’left’，how=’right’，</p>
+<p>​    —  内合并：只保留两者都有的key（默认模式）</p>
+<p>​    —  外合并 how=’outer’：补NaN</p>
+<p>​    —  左合并、右合并：how=’left’，how=’right’，</p>
 <p><strong>列冲突的解决</strong> </p>
-<p>​    –  当列冲突时，即有多个列名称相同时，需要使用on=来指定哪一个列作为key，配合suffixes指定冲突列名</p>
-<p>​    –  可以使用suffixes=自己指定后缀</p>
+<p>​    —  当列冲突时，即有多个列名称相同时，需要使用on=来指定哪一个列作为key，配合suffixes指定冲突列名</p>
+<p>​    —  可以使用suffixes=自己指定后缀</p>
 <h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><p>Pandas I/O API是一套像<code>pd.read_csv()</code>一样返回<code>Pandas</code>对象的顶级读取器函数。</p>
 <p>读取文本文件(或平面文件)的两个主要功能是<code>read_csv()</code>和<code>read_table()</code>。它们都使用相同的解析代码来智能地将表格数据转换为<code>DataFrame</code>对象</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandas.read_csv(filepath_or_buffer, sep=&apos;,&apos;, delimiter=None, header=&apos;infer&apos;,</span><br><span class="line">names=None, index_col=None, usecols=None)</span><br></pre></td></tr></table></figure>
@@ -1231,8 +1241,8 @@
 <li>合并：把不同组得到的结果合并起来</li>
 </ul>
 <p>数据分类处理的核心：</p>
-<p>​    –  groupby()函数</p>
-<p>​    –  groups属性查看分组情况</p>
+<p>​    —  groupby()函数</p>
+<p>​    —  groups属性查看分组情况</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">df = DataFrame(&#123;&apos;item&apos;:[&apos;苹果&apos;,&apos;香蕉&apos;,&apos;橘子&apos;,&apos;香蕉&apos;,&apos;橘子&apos;,&apos;苹果&apos;,&apos;苹果&apos;],</span><br><span class="line">                &apos;price&apos;:[4,3,3,2.5,4,2,2.8],</span><br><span class="line">               &apos;color&apos;:[&apos;red&apos;,&apos;yellow&apos;,&apos;yellow&apos;,&apos;green&apos;,&apos;green&apos;,&apos;green&apos;,&apos;yello&apos;],</span><br><span class="line">               &apos;weight&apos;:[12,20,50,30,20,44,37]&#125;)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">	item	price	color	weight</span><br><span class="line">0	苹果	   4.0	   red	    12</span><br><span class="line">1	香蕉	   3.0	   yellow	20</span><br><span class="line">2	橘子	   3.0	   yellow	50</span><br><span class="line">3	香蕉	   2.5	   green	30</span><br><span class="line">4	橘子	   4.0	   green	20</span><br><span class="line">5	苹果	   2.0	   green	44</span><br><span class="line">6	苹果	   2.8	   yello	37</span><br></pre></td></tr></table></figure>
 <p>根据item分组,通过groups属性查看结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">df.groupby(&quot;item&quot;).groups</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&#123;&apos;橘子&apos;: Int64Index([2, 4], dtype=&apos;int64&apos;),</span><br><span class="line"> &apos;苹果&apos;: Int64Index([0, 5, 6], dtype=&apos;int64&apos;),</span><br><span class="line"> &apos;香蕉&apos;: Int64Index([1, 3], dtype=&apos;int64&apos;)&#125;</span><br></pre></td></tr></table></figure>
@@ -1241,12 +1251,12 @@
 <h1 id="Matplotlib-1"><a href="#Matplotlib-1" class="headerlink" title="Matplotlib"></a>Matplotlib</h1><p>matplotlib在Python中应用最多的2D图像的绘图工具包，使用matplotlib能够非常简单的可视化数据。在matplotlib中使用最多的模块就是pyplot。pyplot非常接近Matlab的绘图实现，而且大多数的命令及其类似Matlab.当然，与Matlab类似，需要很多的数学运算，因此numpy这个组件同样是必不可少的。所以很多人说python+matplotlib+numpy就是MATLAB。</p>
 <h2 id="一、Matplotlib基础知识"><a href="#一、Matplotlib基础知识" class="headerlink" title="一、Matplotlib基础知识"></a>一、Matplotlib基础知识</h2><p>Matplotlib中的基本图表包括的元素</p>
 <ul>
-<li>x轴和y轴–axis  ， 水平和垂直的轴线</li>
-<li>轴标签–axisLabel  ， 水平和垂直的轴标签</li>
-<li>x轴和y轴刻度–tick  ， 刻度标示坐标轴的分隔，包括最小刻度和最大刻度</li>
-<li>x轴和y轴刻度标签–tick label  ， 表示特定坐标轴的值</li>
-<li>绘图区域（坐标系）–axes  ， 实际绘图的区域</li>
-<li>画布–figure  ， 呈现所有的坐标系</li>
+<li>x轴和y轴—axis  ， 水平和垂直的轴线</li>
+<li>轴标签—axisLabel  ， 水平和垂直的轴标签</li>
+<li>x轴和y轴刻度—tick  ， 刻度标示坐标轴的分隔，包括最小刻度和最大刻度</li>
+<li>x轴和y轴刻度标签—tick label  ， 表示特定坐标轴的值</li>
+<li>绘图区域（坐标系）—axes  ， 实际绘图的区域</li>
+<li>画布—figure  ， 呈现所有的坐标系</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/shuaixiaohao/shuaixiaohao.github.io/master/blog-image/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/matplotlib%E5%9B%BE%E5%83%8F%E7%BB%84%E6%88%90.PNG" alt></p>
 <h3 id="只含单一曲线的图"><a href="#只含单一曲线的图" class="headerlink" title="只含单一曲线的图"></a>只含单一曲线的图</h3><p>1、可以使用多个plot函数（推荐），在一个图中绘制多个曲线</p>
@@ -1290,6 +1300,7 @@
 <li>loc参数用于设置图例标签的位置，一般在legend函数内</li>
 <li>matplotlib已经预定义好几种数字表示的位置</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1337,6 +1348,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>loc参数可以是2元素的元组，表示图例左下角的坐标</p>
 <ul>
 <li>[0,0] 左下</li>
@@ -1376,6 +1388,7 @@
 <ul>
 <li>color = ‘red’</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1422,6 +1435,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p> HTML十六进制字符串</p>
 <ul>
 <li>color = ‘#eeefff’</li>
@@ -1437,6 +1451,7 @@
 <p>设置背景色，通过plt.subplot()方法传入facecolor参数，来设置坐标系的背景色</p>
 <p><strong>线型</strong> </p>
 <p>参数linestyle或ls</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1454,7 +1469,7 @@
 <td>虚线</td>
 </tr>
 <tr>
-<td>‘–’</td>
+<td>‘—‘</td>
 <td>破折线</td>
 <td>‘steps’</td>
 <td>阶梯线</td>
@@ -1467,6 +1482,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>不同宽度的破折线</strong> </p>
 <p>dashes参数 eg.dashes = [20,50,5,2,10,5]</p>
 <p>设置破折号序列各段的宽度</p>
@@ -1475,6 +1491,7 @@
 <li>marker 设置点形</li>
 <li>markersize 设置点形大小</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1499,6 +1516,8 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1528,6 +1547,8 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1557,6 +1578,8 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1581,6 +1604,8 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1600,6 +1625,8 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1624,9 +1651,11 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>多参数连用</strong> </p>
 <p>颜色、点型、线型，可以把几种参数写在一个字符串内进行设置 ‘r-.o’</p>
 <p><strong>更多点和线的设置</strong> </p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1663,6 +1692,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>多个曲线同一设置</strong> </p>
 <p>属性名声明，不可以多参数连用</p>
 <p>plt.plot(x1, y1, x2, y2, fmt, …)</p>
@@ -1742,6 +1772,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(0,2*np.pi,20)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.scatter(x,y)</span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/shuaixiaohao/shuaixiaohao.github.io/master/blog-image/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/scatter.png" alt></p>
 <h2 id="四、图形内的文字、注释、箭头"><a href="#四、图形内的文字、注释、箭头" class="headerlink" title="四、图形内的文字、注释、箭头"></a>四、图形内的文字、注释、箭头</h2><p>控制文字属性的方法:</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1793,6 +1824,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>所有的方法会返回一个matplotlib.text.Text对象</p>
 <h3 id="图形内的文字"><a href="#图形内的文字" class="headerlink" title="图形内的文字"></a>图形内的文字</h3><p>text()</p>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>annotate()</p>
@@ -2790,7 +2822,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

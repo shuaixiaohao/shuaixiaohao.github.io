@@ -515,13 +515,13 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">legend</span>&gt;</span>必填信息<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>用户名: <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"uid"</span> <span class="attr">placeholder</span>=<span class="string">"请输入用户名"</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>密码 <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"pwd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>性别: <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span>&gt;</span>男</span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">checked</span>&gt;</span>女</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>action</code> “”里面是要提交的地址</p>
 <p><code>method</code> 规定如何发送表单数据（表单数据发送到 action属性所规定的页面）。共有两种方法：post 方法和 get 方法</p>
-<p> – get</p>
+<p> — get</p>
 <ul>
 <li>get是从服务器上获取数据</li>
 <li>get是把参数数据队列加到提交表单的action属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到</li>
 <li>get传送的数据量较小。</li>
 <li><p>get安全性非常低。</p>
-<p>– post</p>
+<p>— post</p>
 </li>
 <li><p>post是向服务器传送数据</p>
 </li>
@@ -666,6 +666,7 @@
 <p>encodeURIComponent() - 处理成百分号编码</p>
 <p>decodeURIComponent() - 将百分号编码解码还原</p>
 <h3 id="Date-对象"><a href="#Date-对象" class="headerlink" title="Date 对象"></a>Date 对象</h3><p>创建 Date 对象： new Date() </p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -704,6 +705,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h3><p><strong>alert()</strong>          浏览器弹出带有一段消息和一个确认按钮的警告框</p>
 <p><strong>prompt()</strong>    显示可提示用户输入的对话框</p>
 <p>confirm()    显示带有一段消息以及确认按钮和取消按钮的对话框</p>
@@ -1184,13 +1186,13 @@ controls 元素提供了 播放、暂停和音量控件来控制视频。
 123456789101112131415161718&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;&quot;&gt;  &lt;fieldset&gt;    &lt;legend&gt;必填信息&lt;/legend&gt;    &lt;p&gt;      &lt;label&gt;用户名: &lt;/label&gt;      &lt;input type=&quot;text&quot; name=&quot;uid&quot; placeholder=&quot;请输入用户名&quot; required&gt;    &lt;/p&gt;    &lt;p&gt;      &lt;label&gt;密码 &lt;/label&gt;      &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;    &lt;/p&gt;    &lt;p&gt;      &lt;label&gt;性别: &lt;/label&gt;      &lt;input type=&quot;radio&quot; name=&quot;sex&quot;&gt;男      &lt;input type=&quot;radio&quot; name=&quot;sex&quot; checked&gt;女    &lt;/p&gt;  &lt;/fieldset&gt;&lt;/form&gt;
 action “”里面是要提交的地址
 method 规定如何发送表单数据（表单数据发送到 action属性所规定的页面）。共有两种方法：post 方法和 get 方法
- – get
+ — get
 
 get是从服务器上获取数据
 get是把参数数据队列加到提交表单的action属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到
 get传送的数据量较小。
 get安全性非常低。
-– post
+— post
 
 post是向服务器传送数据
 
@@ -1335,6 +1337,7 @@ JavaScript​    ECMAScript - 语法规范 - ES5                (ECMA欧洲计�
 &lt;p&gt;encodeURIComponent() - 处理成百分号编码&lt;/p&gt;
 &lt;p&gt;decodeURIComponent() - 将百分号编码解码还原&lt;/p&gt;
 &lt;h3 id=&quot;Date-对象&quot;&gt;&lt;a href=&quot;#Date-对象&quot; class=&quot;headerlink&quot; title=&quot;Date 对象&quot;&gt;&lt;/a&gt;Date 对象&lt;/h3&gt;&lt;p&gt;创建 Date 对象： new Date() &lt;/p&gt;
+&lt;div class=&quot;table-container&quot;&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1373,6 +1376,7 @@ JavaScript​    ECMAScript - 语法规范 - ES5                (ECMA欧洲计�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;/div&gt;
 &lt;h3 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;alert()&lt;/strong&gt;          浏览器弹出带有一段消息和一个确认按钮的警告框&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;prompt()&lt;/strong&gt;    显示可提示用户输入的对话框&lt;/p&gt;
 &lt;p&gt;confirm()    显示带有一段消息以及确认按钮和取消按钮的对话框&lt;/p&gt;
@@ -1531,13 +1535,13 @@ JavaScript​    ECMAScript - 语法规范 - ES5                (ECMA欧洲计�
 123456789101112131415161718&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;&quot;&gt;  &lt;fieldset&gt;    &lt;legend&gt;必填信息&lt;/legend&gt;    &lt;p&gt;      &lt;label&gt;用户名: &lt;/label&gt;      &lt;input type=&quot;text&quot; name=&quot;uid&quot; placeholder=&quot;请输入用户名&quot; required&gt;    &lt;/p&gt;    &lt;p&gt;      &lt;label&gt;密码 &lt;/label&gt;      &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;    &lt;/p&gt;    &lt;p&gt;      &lt;label&gt;性别: &lt;/label&gt;      &lt;input type=&quot;radio&quot; name=&quot;sex&quot;&gt;男      &lt;input type=&quot;radio&quot; name=&quot;sex&quot; checked&gt;女    &lt;/p&gt;  &lt;/fieldset&gt;&lt;/form&gt;
 action “”里面是要提交的地址
 method 规定如何发送表单数据（表单数据发送到 action属性所规定的页面）。共有两种方法：post 方法和 get 方法
- – get
+ — get
 
 get是从服务器上获取数据
 get是把参数数据队列加到提交表单的action属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到
 get传送的数据量较小。
 get安全性非常低。
-– post
+— post
 
 post是向服务器传送数据
 
@@ -1682,6 +1686,7 @@ JavaScript​    ECMAScript - 语法规范 - ES5                (ECMA欧洲计�
 &lt;p&gt;encodeURIComponent() - 处理成百分号编码&lt;/p&gt;
 &lt;p&gt;decodeURIComponent() - 将百分号编码解码还原&lt;/p&gt;
 &lt;h3 id=&quot;Date-对象&quot;&gt;&lt;a href=&quot;#Date-对象&quot; class=&quot;headerlink&quot; title=&quot;Date 对象&quot;&gt;&lt;/a&gt;Date 对象&lt;/h3&gt;&lt;p&gt;创建 Date 对象： new Date() &lt;/p&gt;
+&lt;div class=&quot;table-container&quot;&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1720,6 +1725,7 @@ JavaScript​    ECMAScript - 语法规范 - ES5                (ECMA欧洲计�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;/div&gt;
 &lt;h3 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;alert()&lt;/strong&gt;          浏览器弹出带有一段消息和一个确认按钮的警告框&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;prompt()&lt;/strong&gt;    显示可提示用户输入的对话框&lt;/p&gt;
 &lt;p&gt;confirm()    显示带有一段消息以及确认按钮和取消按钮的对话框&lt;/p&gt;
@@ -2555,7 +2561,7 @@ JavaScript​    ECMAScript - 语法规范 - ES5                (ECMA欧洲计�
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
